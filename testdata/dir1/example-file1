@@ -1,0 +1,6 @@
+ABC
+XXX="__VAR1__"
+YYY=__VAR2__
+XXXYYY="__VAR1____VAR2__"
+XXXsYYY="__VAR1__ __VAR2__"
+AAA=__VARR__

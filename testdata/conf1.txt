@@ -1,0 +1,6 @@
+VARR=__VAR1__
+VAR1="abc"
+VAR2=true
+VAR3=123
+# comment
+

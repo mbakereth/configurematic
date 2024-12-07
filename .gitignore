@@ -1,0 +1,17 @@
+**/.DS_Store
+**/*.pyc
+**/__pycache__
+**/node_modules
+**/.env
+**/.env.*
+**/env
+**/keys
+**/.vscode
+config.env
+.*.swp
+**/.*.swp
+venv
+**/venv
+out
+**/*.egg-info
+dist
