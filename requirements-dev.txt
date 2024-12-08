@@ -1,3 +1,4 @@
 bumpver
 twine
 build
+flake8

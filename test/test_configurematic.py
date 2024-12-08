@@ -1,4 +1,5 @@
-# Copyright (c) 2024 Matthew Baker.  All rights reserved.  Licenced under the Apache Licence 2.0.  See LICENSE file
+# Copyright (c) 2024 Matthew Baker.  All rights reserved.  Licenced under the
+# Apache Licence 2.0.  See LICENSE file
 import unittest
 import shutil
 import os
@@ -6,16 +7,18 @@ from typing import List
 from argparse import Namespace
 import configurematic
 
+
 def read_file(filename):
-    lines : List[str] = []
+    lines: List[str] = []
     with open(filename, "r") as f:
         for line in f:
             lines.append(line)
     return lines
 
+
 class TypedDictConfigurematic(unittest.TestCase):
 
-    def check(self, resursive : bool):
+    def check(self, resursive: bool):
         self.assertTrue(os.path.isfile("out/testdata/dir1/file1"))
         self.assertTrue(os.path.isfile("out/testdata/dir1/dir2/file2"))
         self.assertTrue(os.path.isfile("out/testdata/dir1/dir2/file3"))
@@ -37,7 +40,6 @@ class TypedDictConfigurematic(unittest.TestCase):
         else:
             self.assertEqual(file1[5].strip(), 'AAA=__VAR1__')
 
-
         file2 = read_file("out/testdata/dir1/dir2/file2")
         self.assertEqual(len(file2), 3)
         self.assertEqual(file2[0].strip(), 'ABC')
@@ -50,7 +52,6 @@ class TypedDictConfigurematic(unittest.TestCase):
         self.assertEqual(file3[1].strip(), 'YYY=true')
         self.assertEqual(file3[2].strip(), 'ZZZ=123')
 
-
     def test_nonrecursive(self):
         if (os.path.isdir("out")):
             shutil.rmtree("out")
@@ -60,7 +61,7 @@ class TypedDictConfigurematic(unittest.TestCase):
         args.outdir = "out"
         args.prefix = "example-"
         args.backup_ext = ".old"
-        args.delimeter="__"
+        args.delimeter = "__"
         args.silent = True
         args.recursive = False
         files = configurematic.get_filenames(args.files)
@@ -74,8 +75,8 @@ class TypedDictConfigurematic(unittest.TestCase):
         self.assertTrue(os.path.isfile("out/testdata/dir1/dir2/file2.old"))
         self.assertTrue(os.path.isfile("out/testdata/dir1/dir2/file3.old"))
 
-        #if (os.path.isdir("out")):
-        #    shutil.rmtree("out")
+        if (os.path.isdir("out")):
+            shutil.rmtree("out")
 
     def test_recursive(self):
         if (os.path.isdir("out")):
@@ -86,7 +87,7 @@ class TypedDictConfigurematic(unittest.TestCase):
         args.outdir = "out"
         args.prefix = "example-"
         args.backup_ext = ".old"
-        args.delimeter="__"
+        args.delimeter = "__"
         args.silent = True
         args.recursive = True
         files = configurematic.get_filenames(args.files)

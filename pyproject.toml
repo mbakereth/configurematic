@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "configurematic"
-version = "0.0.7"
+version = "0.0.1"
 description = "Put configuration from one file into multiple files"
 readme = "README.md"
 authors = [{ name = "Matthew Baker", email = "matt@mattbaker.ch" }]
@@ -30,7 +30,7 @@ requires-python = ">=3.12"
     repository    = "https://github.com/mbakereth/configurematic"
 
 [tool.bumpver]
-current_version = "0.0.7"
+current_version = "0.0.1"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message  = "bump version {old_version} -> {new_version}"
 commit          = true
