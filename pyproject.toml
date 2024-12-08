@@ -18,7 +18,7 @@ keywords = ["feed", "reader", "tutorial"]
 dependencies = [
         "python-dotenv",
     ]
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 
     [project.optional-dependencies]
     build = ["build", "twine"]
