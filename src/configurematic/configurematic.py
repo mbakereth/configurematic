@@ -162,7 +162,7 @@ def main():
                         help='Env file with variable settings')
     parser.add_argument('-p', '--prefix', default="example-",
                         help='Template files begin with this')
-    parser.add_argument('-f', '--files',
+    parser.add_argument('-f', '--files', default="files.txt",
                         help='List of template files (without prefix)')
     parser.add_argument('-o', '--outdir', nargs='?', default=".",
                         help='Where to write output files')

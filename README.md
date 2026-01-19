@@ -94,7 +94,7 @@ instead of in a file.
 Finally, run Configurematic:
 
 ```shell
-configurematic -f files.txt
+configurematic
 ```
 
 Next to each of your `example-*` files you will see a new file without
@@ -107,6 +107,8 @@ next to it with a `.old` suffix (which can be overridden with `--backup-ext`).
 ## Options
 
 Use `--conf-file` or `-c` to use a different file instead of `config.env`.
+
+Use `--files` or `-f` to use a different file instead of `files.txt`.
 
 To output all the files to a different directory (with the same directory
 hierarchy within it), use `--outdir` or `-o`.
