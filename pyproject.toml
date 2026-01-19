@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "configurematic"
-version = "0.0.1"
+version = "0.0.2"
 description = "Put configuration from one file into multiple files"
 readme = "README.md"
 authors = [{ name = "Matthew Baker", email = "matt@mattbaker.ch" }]
